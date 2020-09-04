@@ -16,10 +16,9 @@ class CashRegister
       @its << title
     end
 
-
+    @pr = (price * quantity)
     @total = @total + (price * quantity)
-    @pr = @total - (price * quantity)
-    @total
+
   end
 
   def apply_discount
@@ -36,8 +35,8 @@ class CashRegister
   end
 
   def void_last_transaction
+    @total - @pr
 
-    @pr
   end
 
 end
