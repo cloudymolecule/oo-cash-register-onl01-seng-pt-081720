@@ -4,7 +4,7 @@ class CashRegister
   attr_accessor :total, :discount, :pr
   @total
   @discount
-  
+
   def initialize(discount = 0)
     @total = 0
     @discount = discount
@@ -15,8 +15,10 @@ class CashRegister
     (quantity).times do
       @its << title
     end
-    @pr = price * quantity
+    #@pr = price * quantity
     @total = @total + (price * quantity)
+    @pr = @total - (price * quantity)
+    @total
   end
 
   def apply_discount
