@@ -16,7 +16,7 @@ class CashRegister
       @its << title
     end
 
-    #@pr = price * quantity
+    @pr = price * quantity
     @total = @total + (price * quantity)
 
   end
