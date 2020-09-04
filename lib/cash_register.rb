@@ -1,4 +1,5 @@
 require "pry"
+
 class CashRegister
   attr_accessor :total, :discount
   @total
@@ -11,17 +12,13 @@ class CashRegister
   end
 
   def add_item(title, price, quantity = 1)
-
     (quantity).times do
       @its << title
     end
-
     @total = @total + (price * quantity)
-
   end
 
   def apply_discount
-
     if @discount != 0
       @total = @total - ((@total / 100)* (@discount) )
       return "After the discount, the total comes to $#{@total}."
