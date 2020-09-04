@@ -16,8 +16,9 @@ class CashRegister
       @its << title
     end
 
-    @pr = @total
+
     @total = @total + (price * quantity)
+    @pr = @total
     binding.pry
   end
 
