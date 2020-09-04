@@ -15,9 +15,10 @@ class CashRegister
     (quantity).times do
       @its << title
     end
-    binding.pry 
+
     #@pr = price * quantity
     @total = @total + (price * quantity)
+    binding.pry
   end
 
   def apply_discount
