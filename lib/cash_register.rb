@@ -12,9 +12,9 @@ class CashRegister
   end
 
   def add_item(title, price, quantity = 1)
-    @its << self[0]
+    binding.pry
     @total = @total + (price * quantity)
-    @total
+  
   end
 
   def apply_discount
